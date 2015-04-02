@@ -1,0 +1,116 @@
+\section{Data formats in NGS analysis}
+\label{AppendixDataFormats}
+
+The following table contains explanations and example entries for a selection of commonly used data formats for the handling of high-throughput DNA sequencing data. The most current version of this table can be found at \url{http:\\github.com/fidelram/deeptools/wiki/Glossary} .
+
+\begin{longtable}{>{\ttfamily}l >{\sffamily}p{11cm}}
+BAM & \begin{minipage}{11cm}
+				\vskip 6pt
+				\begin{itemize}[noitemsep]
+					\item binary (non-human-readable) file
+					\item compressed version of a SAM file (see below)
+					\item \small{\url{https://genome.ucsc.edu/goldenPath/help/bam.html}}
+				\end{itemize}				
+				%\vskip 4pt
+			\end{minipage}
+\tabularnewline \midrule
+%-----------------------
+bed & \begin{minipage}{11cm}
+				\vskip 6pt
+				\begin{itemize}[noitemsep]
+					\item text file
+					\item storage of genomic intervals, e.g. genes, peak regions etc. 
+					\item or deepTools, the first 3 columns are important: chromosome, start position of the region, end position of the region
+					\item ex. line: \texttt{chr1 123000 138000 GeneX 0 +}
+					\item \small{\url{https://genome.ucsc.edu/FAQ/FAQformat.html#format1}}
+				\end{itemize}				
+				%\vskip 4pt
+			\end{minipage}
+\tabularnewline \midrule
+%-----------------------
+bedGraph & \begin{minipage}{11cm}
+				\vskip 6pt
+				\begin{itemize}[noitemsep]
+					\item text file
+					\item storage of genomic intervals \textbf{plus} score (must be in 4th column)
+					\item ex. line: \texttt{chr1 123000 138000 5.4}
+					\item \small{\url{https://genome.ucsc.edu/FAQ/FAQformat.html#format1.8}}
+				\end{itemize}				
+				%\vskip 4pt
+			\end{minipage}
+\tabularnewline \midrule
+%-----------------------
+bigWig & \begin{minipage}{11cm}
+    		\vskip 6pt
+	    	\begin{itemize}[noitemsep]
+	   			\item binary (non-human-readable) file
+	   			\item compressed version of a bedGraph file (see above)
+			   	\item \small{\url{https://genome.ucsc.edu/goldenPath/help/bigWig.html}}
+	   		\end{itemize}
+	   		\vskip 4pt
+		 \end{minipage}											
+\tabularnewline \midrule
+%-----------------------
+FASTA & \begin{minipage}{11cm}
+    		\vskip 6pt
+	    	\begin{itemize}[noitemsep]
+			   	\item text file
+			   	\item storage of DNA or protein \textbf{sequences}
+			   	\item ex. line: \small{\texttt{>AB000263 |acc=AB000263|descr=Homo sapiens mRNA for prepro cortistatin like peptide,complete cds.
+			   	|len=368 ACAAGATGCCATTGTCCCCCGGCCTCCTGCTGCTGCTGCTCTC
+			   	CGGGGCCACGGCCACCGCTGCCCTGCCCCTGGAGGGTGGCCCCACCGGCCGA
+			   	GACAGCGAGCATATGCAGGAAGCGGCAGGAATAAGGAAAAGCAGCCTCCTGA
+			   	CTTTCCTCGCTTGGTGGTTTGAGTGGACCTCCCAGGCCAGTGCCGGGCCCCT
+			   	CATAGGAGAGGAAGCTCGGGAGGTGGCCAGGCGGCAGGAAGGCGCACCCCCC
+			   	CAGCAATCCGCGCGCCGGGACAGAATGCCCTGCAGGAACTTCTTCTGGAAGA
+			   	CCTTCTCCTCCTGCAAATAAAACCTCACCCATGAATGCTCACGCAAGTTTAA
+			   	TTACAGACCTGAA}}
+				\item \small{\url{http://genetics.bwh.harvard.edu/pph/FASTA.html}}
+	   		\end{itemize}
+	   		\vskip 4pt
+		 \end{minipage}
+\tabularnewline \midrule
+%-----------------------
+FASTQ & \begin{minipage}{11cm}
+    		\vskip 6pt
+	    	\begin{itemize}[noitemsep]
+	    		\item text file
+	    		\item "raw" output from commonly used sequencing machines
+	    		\item contains one line per sequenced read (DNA sequence and quality measures for how well each base was identified)
+	   			\item ex. line: \small{\texttt{@39V34V1:40:D158JACXX:8:1101:1220:20841:N:0:
+	   			CTTGTAGTCTTATTTAGTCAGGCCCCAGAGAATGAGTTCCTCAGAGGAGTTGTTCCA}}
+	   			\item \small{\url{http://maq.sourceforge.net/fastq.shtml}}
+	   		\end{itemize}
+	   		\vskip 4pt
+		 \end{minipage}
+%-----------------------
+\tabularnewline \midrule
+SAM & \begin{minipage}{11cm}
+    		\vskip 6pt
+	    	\begin{itemize}[noitemsep]
+	    		\item ouput format of most read alignment tools, e.g. bowtie2, TopHat etc.
+	    		\item contains information about \textbf{each read}: DNA sequence, genomic localisation, \emph{sequencing} quality measures, \emph{mapping} quality scores, diverse "flags"
+	   			\item ex. line: \small{\texttt{39V34V1:38:C0RLHACXX:4:1216:16137:31969 163 
+					chr1 3000307 42 51M = 3000408152 CTGTAGTTACTGTTTGCTTACCTAGATTCTTCTTTTCCAGAATTCTCTTAGCCC
+					FFFFFHHHGHIIJIJJJJIIGHFGIGIJIIJJJHIHEHIGIIIIJJGF
+					AS:i:0XN:i:0XM:i:0 XO:i:0 XG:i:0 NM:i:0 MD:Z:51 YS:i:0 YT:Z:CP}}
+			   	\item \small{\url{http://samtools.sourceforge.net/SAMv1.pdf}}
+	   		\end{itemize}
+	   		\vskip 4pt
+		 \end{minipage}
+\tabularnewline \midrule
+%-----------------------
+2bit & \begin{minipage}{11cm}
+    		\vskip 6pt
+	    	\begin{itemize}[noitemsep]
+	   			\item binary (non-human-readable)
+	   			\item compressed version of a FASTA file (see above)
+	   			\item useful for storing the sequence of an entire genome
+			   	\item \small{\url{https://genome.ucsc.edu/FAQ/FAQformat.html#format7}}
+	   		\end{itemize}
+	   		\vskip 4pt
+		 \end{minipage}
+\tabularnewline \midrule
+%-----------------------
+\end{longtable}
+

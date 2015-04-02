@@ -1,0 +1,326 @@
+%\begin{landscape}
+\begin{singlespacing}
+\begin{small}
+%\setlength{\extrarowheight}{15pt} % this doesn't work to control the vertical space
+\vspace*{-1em}
+\begin{longtable}{>{\textsf\bgroup\raggedleft\arraybackslash}p{2.7cm}<{\egroup} >{\textsf\bgroup}p{4.5cm}<{\egroup} >{\textsf\bgroup}p{4.2cm}<{\egroup}>{\textsf\bgroup}p{2.3cm}<{\egroup}} % defining the columns - these must match the widths defined for the mini pages down below!
+\caption[Bioinformatic tools used for analyses presented here.]{\textsf{Bioinformatic tools used for analyses presented here (alphabetical order; if available, I indicated the versions of the tools that I used). For explanations of the file formats mentioned here, please see the glossary of within the supplement of \aref{SuppPub_deepTools}.}} \\ % the \\ is important! see http://tex.stackexchange.com/questions/103698/extra-alignment-tab-with-longtable
+%%%%%%%%%%%%%%%
+% table title
+\textbf{Name} & \textbf{Application} & \textbf{Website} & \textbf{Reference}
+\tabularnewline \hline
+\endfirsthead % indicates that the lines above appear as head of the table on the first page
+\multicolumn{4}{c}%
+{\tablename\ \thetable\ -- \textit{Continued from previous page}} \\[1ex]
+\textbf{Name} & \textbf{Application} & \textbf{Website} & \textbf{Reference}
+\tabularnewline \toprule %\tabularnewline [1ex]
+\endhead % Line(s) to appear at top of every page (except first)
+\multicolumn{4}{r}{\textit{Continued on next page}} \\
+\endfoot % Last line(s) to appear at the bottom of every page (except last)
+\endlastfoot
+%%%%%%%%%%%%%%%%%%%
+%% first row
+%-----------------------
+\toprule %\\ [4ex]
+ \begin{minipage}{2.7cm}
+				\textbf{bedtools} \\
+					(2.10. to 2.17)
+				\end{minipage}
+			&	 \begin{minipage}{4.5cm}
+				working with genomic intervals, e.g. intersecting two files with different peak regions
+			\end{minipage} 
+			&  \begin{minipage}{4.2cm}
+			\url{http://bedtools.readthedocs.org/en/latest/}
+			\end{minipage} 
+			&  \begin{minipage}{2.3cm}
+					\raggedright \citet{Quinlan2010}
+				\end{minipage} 
+%\\ [4ex] \hline \\ [1ex]
+\tabularnewline \midrule
+%---------------------------
+ \begin{minipage}{2.7cm}
+				\textbf{bowtie} \\
+					bowtie-1.0.0\\(Appendix \ref{SuppPub_NSL}),\\
+					bowtie2-2.2.2\\(Appendix \ref{SuppPub_MSL}) %\\ [2ex]
+			\end{minipage} 
+			&  \begin{minipage}{4.5cm}
+			alignment of reads to the reference genome
+				\end{minipage} 
+				&  \begin{minipage}{4.2cm}
+				\url{http://bowtie-bio.sourceforge.net/index.shtml}
+				\end{minipage} 
+				&  \begin{minipage}{2.3cm}
+				Langmead and\\
+				Salzberg \citep{Langmead2012}
+			\end{minipage} 
+%\\ [4ex] \hline \\ [1ex]
+\tabularnewline \midrule
+%-----------------------
+ \begin{minipage}{2.7cm}
+				\textbf{ChIPEnrich}
+			\end{minipage} 
+			&  \begin{minipage}{4.5cm}
+					gene ontology enrichments for target genes identified by ChIP-seq
+			\end{minipage} 
+			&  \begin{minipage}{4.2cm}
+					\url{http://sartorlab.ccmb.med.umich.edu/chip-enrich}
+			\end{minipage} 
+			&  \begin{minipage}{2.3cm}
+				\citet{Welch2014}
+			\end{minipage} 
+%\\ [4ex] \hline \\ [1ex]
+\tabularnewline \midrule
+%-----------------------------
+ \begin{minipage}{2.7cm}
+		\textbf{DAVID}
+\end{minipage} 
+			&  \begin{minipage}{4.5cm}
+				gene identifier mapping and gene ontology term enrichment analyses
+			\end{minipage} 
+			&  \begin{minipage}{4.2cm}
+				\url{http://david.abcc.ncifcrf.gov/}
+			\end{minipage} 
+				&  \begin{minipage}{2.3cm}
+				\citet{Huang2009}
+			\end{minipage} 
+%\\ [4ex] \hline \\ [1ex]
+\tabularnewline \midrule
+%-----------------------------
+ \begin{minipage}{2.7cm}
+					\textbf{deepTools} \\
+					(up to 1.5.7) %\\ [2ex]
+			\end{minipage} 
+			&  \begin{minipage}{4.5cm}
+				quality controls of BAM files, normalizations, coverage file generation, visualizations with heatmaps and summary plots %\\ [2ex]
+			\end{minipage} 
+			&  \begin{minipage}{4.2cm}
+				\url{http://deeptools.github.io/} %\\ [2ex]
+			\end{minipage} 
+				&  \begin{minipage}{2.3cm}
+		\raggedright Ramirez, Dündar et al. \citep{Ramirez2014} %\\ [2ex]
+			\end{minipage} 
+%\\ [4ex] \hline \\ [1ex]
+\tabularnewline \midrule
+%-----------------------------
+ \begin{minipage}{2.7cm}
+					\textbf{DESeq}\\
+					(1.10.1)
+				\end{minipage} 
+			&  \begin{minipage}{4.5cm}
+				calculating normalized fold change values for Pol~II ChIP-seq data set \citep{EBIroutine}
+			\end{minipage} 	
+			&  \begin{minipage}{4.2cm}
+				\url{http://www-huber.embl.de/users/anders/DESeq/}
+			\end{minipage}
+				& 
+				\begin{minipage}{2.3cm}
+		\citet{Anders2010}
+			\end{minipage} 
+%\\ [4ex] \hline \\ [1ex]
+\tabularnewline \midrule
+%---------------------------
+ \begin{minipage}{2.7cm}
+				\textbf{fastqc}
+				\end{minipage}
+			&  \begin{minipage}{4.5cm}
+				quality control of FASTQ files
+			\end{minipage} 
+			&  \begin{minipage}{4.2cm}
+				\url{http://www.bioinformatics.babraham.ac.uk/projects/fastqc/}
+			\end{minipage} 
+			&  not available
+%\\ [4ex] \hline \\ [1ex]
+\tabularnewline \midrule
+%-----------------------------
+ \begin{minipage}{2.7cm}
+				\textbf{Galaxy} %%\\ [2ex]
+				\end{minipage} 
+			&  \begin{minipage}{4.5cm}
+				vast collection of tools for manifold tasks including working with genomic intervals, joining of lists, motif search etc. %\\ [2ex]
+			\end{minipage} 
+			&  \begin{minipage}{4.2cm}
+				in-house installation %%\\ [2ex]
+			\end{minipage} 
+					&  \begin{minipage}{2.3cm}
+		\citet{Goecks2010} %%\\ [2ex]
+			\end{minipage} 
+%\\ [4ex] \hline \\ [1ex]
+\tabularnewline \midrule
+%-----------------------------
+ \begin{minipage}{2.7cm}
+					\textbf{ggplot2}\\
+					(0.9.3.1)
+			\end{minipage} 
+			&  \begin{minipage}{4.5cm}
+				R package for highly customizable plots (e.g. boxplots, x-y plots, bar charts etc.)
+			\end{minipage} 
+			&  \begin{minipage}{4.2cm}
+				\url{http://ggplot2.org/}
+			\end{minipage} 
+			&  \begin{minipage}{2.3cm}
+		\citet{ggplot2}
+			\end{minipage} 
+%\\ [4ex] \hline \\ [1ex]
+\tabularnewline \midrule
+%-----------------------------
+ \begin{minipage}{2.7cm}
+					\textbf{GREAT}\\
+					(2.0)
+				\end{minipage} 
+			&  \begin{minipage}{4.5cm}
+				web-based tool for target gene prediction
+			\end{minipage} 
+			&  \begin{minipage}{4.2cm}
+				\url{http://bejerano.stanford.edu/great/public/html/}
+			\end{minipage} 
+				&  \begin{minipage}{2.3cm}
+		\citet{McLean2010}
+			\end{minipage} 
+%\\ [4ex] \hline \\ [1ex]
+\tabularnewline \midrule
+%----------------------------
+ \begin{minipage}{2.7cm}
+					\textbf{Integrative\\Genomics\\Viewer}\\
+					(up to 2.3.32) %\\ [2ex]
+			\end{minipage} 
+			& 	\begin{minipage}{4.5cm}
+				genome browser for visualization of BAM, BED, bigWig and bedGraph files %\\ [2ex]
+			\end{minipage} 
+			&  \begin{minipage}{4.2cm}
+				\url{http://www.broadinstitute.org/igv/} %\\ [2ex]
+			\end{minipage} 
+				&  \begin{minipage}{2.3cm}
+		\citet{Thorvaldsdottir2013} %\\ [2ex]
+			\end{minipage} 
+%\\ [4ex] \hline \\ [1ex]
+\tabularnewline \midrule
+%-----------------------------
+ \begin{minipage}{2.7cm}
+					\textbf{liftover}\\
+					(2013)
+			\end{minipage} 
+			&  \begin{minipage}{4.5cm}
+				conversion of sequence coordinates from mm8 assembly to mm9
+			\end{minipage} 
+			&  \begin{minipage}{4.2cm}
+				\url{https://genome.ucsc.edu/cgi-bin/hgLiftOver}
+			\end{minipage} 
+				&  not available
+%\\ [4ex] \hline \\ [1ex]
+\tabularnewline \midrule
+%-----------------------------
+ \begin{minipage}{2.7cm}
+				\textbf{MACS}\\
+					(1.4.2)
+				\end{minipage}
+			&	 \begin{minipage}{4.5cm}
+				identification of significantly enriched ChIP-seq regions
+			\end{minipage} 
+			&  \begin{minipage}{4.2cm}
+				\url{http://liulab.dfci.harvard.edu/MACS/}
+			\end{minipage} 
+				&  \begin{minipage}{2.3cm}
+		\citet{Zhang2008}
+			\end{minipage} 
+%\\ [4ex] \hline \\ [1ex]
+\tabularnewline \midrule
+%-----------------------------
+ \begin{minipage}{2.7cm}
+				\textbf{MEME}\\
+					(4.9.0)
+				\end{minipage} 
+			&  \begin{minipage}{4.5cm}
+				\textit{de novo} DNA motif identification
+			\end{minipage}
+			&  \begin{minipage}{4.2cm}
+				\url{http://meme.nbcr.net/meme/}
+			\end{minipage} 
+					&  \begin{minipage}{2.3cm}
+		\raggedright  \citet{Bailey1994, Machanick2011}
+			\end{minipage} 
+%\\ [4ex] \hline \\ [1ex]
+\tabularnewline \midrule
+%-----------------------------
+\begin{minipage}{2.7cm}
+				\textbf{PeakSplitter}\\
+					(1.0)
+				\end{minipage} 
+			&  \begin{minipage}{4.5cm}
+				splitting peak regions predicted by MACS into separate regions based on local minima detection
+			\end{minipage} 
+			&  \begin{minipage}{4.2cm}
+				\url{http://www.ebi.ac.uk/research/bertone/software}
+			\end{minipage} 
+			&  \begin{minipage}{2.3cm}
+		\citet{Salmon2010}
+			\end{minipage} 
+%\\ [4ex] \hline \\ [1ex]
+\tabularnewline \midrule
+%-----------------------------
+ \begin{minipage}{2.7cm}
+					\textbf{samtools}\\
+					(0.1.19)
+			\end{minipage} 
+			&	 \begin{minipage}{4.5cm}
+				SAM and BAM file handling (indexing, number of mapped/unmapped and uniquely reads etc.)
+			\end{minipage} 
+			&  \begin{minipage}{4.2cm}
+				\url{http://samtools.sourceforge.net/}
+			\end{minipage} 
+				&  \begin{minipage}{2.3cm}
+		\citet{Li2009}
+			\end{minipage} 
+%\\ [4ex] \hline \\ [1ex]
+\tabularnewline \midrule
+%-----------------------------
+ \begin{minipage}{2.7cm}
+					\textbf{TRAP}\\
+					(Annotate v3.04)
+				\end{minipage} 
+			&  \begin{minipage}{4.5cm}
+				transcription factor binding affinity calculation
+			\end{minipage} 
+			&  \begin{minipage}{4.2cm}
+				\url{http://trap.molgen.mpg.de/PASTAA.htm}
+			\end{minipage} 
+				&  \begin{minipage}{2.3cm}
+		\citet{Roider2007}
+			\end{minipage} 
+%\\ [4ex] \hline \\ [1ex]
+\tabularnewline \midrule
+%-----------------------------
+ \begin{minipage}{2.7cm}
+				\textbf{UCSC tools} \\
+					(2013)
+				\end{minipage} 
+			&  \begin{minipage}{4.5cm}
+				format conversion (bedGraph to bigWig)
+			\end{minipage} 
+			&  \begin{minipage}{4.2cm}
+				\url{http://www.broadinstitute.org/igv/}
+			\end{minipage} 
+					&  \begin{minipage}{2.3cm}
+		\citet{Kent2010}
+			\end{minipage} 
+%\\ [4ex] \hline \\ [1ex]
+\tabularnewline \midrule
+%-----------------------------
+ \begin{minipage}{2.7cm}
+				\textbf{Venny}\\
+					(2007)
+				\end{minipage} 
+			& 	\begin{minipage}{4.5cm}
+				generation of Venn diagrams
+			\end{minipage} 
+			&  \begin{minipage}{4.2cm}
+				\url{http://bioinfogp.cnb.csic.es/tools/venny/}
+			\end{minipage} 
+			&  not available
+%\\ [4ex] \hline \\ [1ex]
+\tabularnewline \bottomrule
+%-----------------------------
+\label{tab:tools}
+\end{longtable}
+\end{small}
+\end{singlespacing}
+%\end{landscape}

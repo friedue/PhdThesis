@@ -1,0 +1,44 @@
+%\begin{minipage}{\textwidth} % to avoid pagebreaks despite longtable environment
+%\setlength{\extrarowheight}{2pt}
+%\renewcommand{\arraystretch}{1.5}
+\vspace*{-2em}
+%\begin{longtable}[l]{>{\textsf\bgroup}p{3cm}<{\egroup} >{\textsf\bgroup}p{2.5cm}<{\egroup}>{\textsf\bgroup}p{5cm}<{\egroup}} % defining the columns - these must match the widths defined for the mini pages down below!
+\begin{table}[t]
+\begin{singlespacing}
+\begin{small}
+\begin{sffamily}
+\caption[The main histone acetyl transferase families.]{\textsf{The main histone acetyl transferase families. The lysine acetyl transferase (KAT) designation indicates the standardized nomenclature suggested for HATs. GNAT = Gcn5-related \textsl{N}-acetyl transferase, MYST = MOZ, Ybf2/Sas3, Sas2, Tip60. The table was taken from \citet{Berndsen2008}}} %\\ % the \\ is important!
+\label{tab:HATs}
+\begin{tabular}{>{\small\textsf\bgroup}p{3.5cm}<{\egroup} >{\small\textsf\bgroup}p{3.5cm}<{\egroup} >{\small\textsf\bgroup}p{5cm}<{\egroup} }
+%%%%%%%%%%%%%%%
+% table title
+\textbf{Enzyme} & \textbf{KAT designation} & \textbf{Histone specificity}
+\tabularnewline \toprule
+%-----------------------
+\textbf{GNAT family} & & \\
+Gcn5 & 2 & H3K9, 14, 36 \\
+p/CAF & 2B & H3K14
+\tabularnewline \midrule
+%--------------------------
+\textbf{MYST family} & & \\
+Tip60 & 5 & H4K5, K8, K12 (K16) \\
+MOF 	&	8	&	H4K5, K8, K16 \\
+Sas3	&	6	&	H3K14, K23 \\
+MOZ		&	6A & H3K14
+\tabularnewline \midrule
+%--------------------------
+\textbf{p300 and others} & & \\
+CBP & 3A & H2AK5, H2B \\
+p300 	&	3B	&	H2AK5, H2B \\
+Rtt109	&	11 & H3K56, K9, K23	
+%--------------------------
+\tabularnewline \bottomrule
+%-----------------------------
+\end{tabular}
+%\label{tab:HATs}
+%\end{longtable}
+\end{sffamily}
+\end{small}
+\end{singlespacing}
+\end{table}
+%\end{minipage}

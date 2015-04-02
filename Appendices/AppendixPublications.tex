@@ -1,0 +1,125 @@
+% Appendix Template
+
+\definecolor{Light}{gray}{.85}
+\newcommand{\overbox}[2][l]{%
+  \colorbox{Light}{\begin{tabular}{@{}#1@{}}#2\end{tabular}}%
+}
+
+\chapter{Publications and manuscripts} % Main appendix title
+%
+%===================================================
+%%%%%%%%%%%%%%%%%%%%%%%% NSL in D.mel
+\fancyhead{}
+\fancyhead[RO,LE]{Appendix: \emph{Lam, M{\"u}hlpfordt, Vaquerizas et al. (2012), PLoS Genetics.}}
+\fancyfoot[C]{\thepage}
+
+\section{The NSL complex regulates housekeeping genes.}
+\label{SuppPub_NSL} % for referencing this appendix elsewhere, use \aref{SuppPub_NSL}
+
+\begin{center}
+\noindent\overbox[c]{
+Lam,\:K.\:C.*, \textbf{M{\"u}hlpfordt,\:F.*}, Vaquerizas,\:J.\:M.*, Raja,\:S.\:J., Holz,\:H.,\\
+Luscombe,\:N.\:M., Manke,\:T., Akhtar,\:A. (2012). \textit{PLoS Genetics}, 8(6), e1002736.\\
+doi:10.1371/journal.pgen.1002736 \\
+* shared authorship}
+\end{center}
+
+I performed the majority of the bioinformatic analyses such as peak calling optimization 
+and all further downstream analyses for all ChIP-seq samples. For the ChIP-seq samples of RNA Polymerase II, I additionally performed the read alignment and normalization procedures. 
+
+I generated all figures except Figures 1C, 2D, 3B, 5 and Supplementary Figures 3--6. 
+
+Together with Ken Lam and Asifa Akhtar I devised, wrote, and revised the manuscript.
+
+\includepdf[scale=0.9,pages=-,pagecommand={}, offset=0.3cm 0cm]{Figures/Appendix/LamMuhlpfordt2012.pdf} % draft can be added as an option to avoid printing the original pdf; pages=- will include all pages
+
+\subsection{Supplemental Material}
+\fancyhead[RO,LE]{Appendix: Supplement to \emph{Lam, M{\"u}hlpfordt, Vaquerizas et al. (2012), PLoS Genetics.}}
+\begin{figure}[!h]
+\includegraphics[width=.95\textwidth]{Figures/Appendix/LamMuhlpfordt2012_SupplementP1.pdf}
+\end{figure}
+
+\newpage
+
+% INCLUDE THE FIRST PAGE OF THE SUPPLEMENT AS AN IMAGE SO THAT THE HEADER IS NOT ON ITS OWN PAGE
+\includepdf[scale=0.8,pages={2-last},pagecommand={},offset=0.3cm 0cm]{Figures/Appendix/LamMuhlpfordt2012_Supplement.pdf} % pages={2-last} will include 2nd to last page
+
+%===================================================
+%%%%%%%%%%%%%%%%%%%%%%%% ELIFE
+\fancyhead[RO,LE]{Appendix: \emph{Chelmicki, D{\"u}ndar et al. (2014), eLife.}}
+\section{MOF-associated complexes ensure stem cell identity and \textit{Xist} repression}
+\label{SuppPub_MSL} 
+
+\begin{center}
+\noindent\overbox[c]{Chelmicki,\:T.*, \textbf{D{\"u}ndar,\:F*.}, Turley,\:M.\textsuperscript{$\triangle$}, Khanam,\:T.\textsuperscript{$\triangle$}, Aktas,\:T.\textsuperscript{$\triangle$}, \\
+Ramírez,\:F., Gendrel,\:A.\:V., Wright,\:P.\:R., Videm,\:R., Backofen,\:R.,\\
+Heard,\:E., Manke,\:T., Akhtar,\:A. (2014). eLife. doi:10.7554/eLife.02024 \\
+*, \textsuperscript{$\triangle$} shared authorship}
+\end{center}
+
+I performed all bioinformatic analyses except the mapping of the RNA-seq data and the determination of differentially expressed genes with DESeq2 which was done by Patrick Wright and Pavan Videm.
+
+I generated all figures except Figures 1, 2G, 3F, 5--7 and the corresponding Supplementary Figures. I contributed to Figure 8. 
+
+Together with Tomasz Chelmicki and Asifa Akhtar I devised, wrote, and revised the manuscript. 
+
+\includepdf[scale=0.9,pages=-,pagecommand={}]{Figures/Appendix/ChelmickiDundar2014.pdf} % removed ,offset=75 -75 after replacing vmargin in thesis cls with geometry package
+%
+\subsection{Supplemental Material}
+\fancyhead[RO,LE]{Appendix: Supplement to \emph{Chelmicki, D{\"u}ndar et al. (2014), eLife.}}
+%\includegraphics[width=1\textwidth]{Figures/Appendix/Figure1_supplemental_figure1.pdf}
+\input{Figures/Appendix/ChelmickiDuendar_Supplement}
+\clearpage
+%===================================================
+%%%%%%%%%%%%%%%%%%%%%%%% DEEPTOOLS
+\section{deepTools: a flexible platform for NGS analysis}
+\label{SuppPub_deepTools}
+
+\begin{center}
+\noindent\overbox[c]{Ramírez,\:F.*, \textbf{D{\"u}ndar,\:F.}*, Diehl,\:S., Gr{\"u}ning,\:B.\:A., Manke,\:T. (2014).\\
+Nucleic Acids Research. doi:10.1093/nar/gku365 \\
+*shared authorship}
+\end{center}
+
+I contributed to the development and debugging of the software tools (which were programmed to the largest extent by Fidel Ramírez).
+
+I designed and generated the entire content of the deepTools documentation and help pages (\url{https://github.com/fidelram/deepTools/wiki}) which are still maintained by me.
+
+I initiated the set-up of the public deepTools Galaxy instance \url{http://deeptools.ie-freiburg.mpg.de/} which was carried out by Sarah Diehl and generated all Galaxy Workflows, information pages (except the video tutorial), and histories.
+
+I contributed to the main figure and devised, wrote, and revised the manuscript together with Fidel Ramírez and Thomas Manke. I generated the supplemental PDF version of the online deepTools documentation that is provided together with the manuscript.
+
+\fancyhead[RO,LE]{Appendix: \emph{Ramírez, D{\"u}ndar et al. (2014), Nucleic Acids Research.}} 
+\includepdf[scale=0.9,pages=-,pagecommand={},offset=0.3cm 0cm]{Figures/Appendix/RamirezDundar2014_scissored.pdf}
+
+
+\subsection{Supplemental Material}
+\fancyhead[RO,LE]{Appendix: Supplement to \emph{Ramírez, D{\"u}ndar et al. (2014), Nucleic Acids Research.}} 
+
+\begin{figure}[!h]
+\includegraphics[width=1\textwidth]{Figures/Appendix/RamirezDundar2014_supplementTables.pdf}
+\end{figure}
+\newpage
+
+\includepdf[scale=0.9,pages=-,pagecommand={},offset=0.3cm 0cm]{Figures/Appendix/RamirezDundar2014_supplementManual.pdf}
+
+%%%%%%%%%%%%%%%%%%%%%%%% MSL1 at promoters
+
+\fancyhead[RO,LE]{} % header on each page
+\section{A regulatory feedback loop between MSL1 and CDK7 controls RNA polymerase II
+Serine 5 phosphorylation}
+\label{SuppPub_MSL1} 
+
+\begin{center}
+\noindent\overbox[c]{
+Chlamydas,\:S., Holz,\:H., Pelechano,\:V., Chelmicki,\:T., Georgiev,\:P.,\\
+\textbf{D{\"u}ndar,\:F.}, Dasmeh,\:P., Mittler,\:G., Tavares Cadete,\:F., Ramírez,\:F.,\\
+Conrad,\:T., Wei,\:W., Raja,\:S., Manke,\:T., Luscombe,\:N.\:M., Steinmetz,\:L.\:M.,\\ Akhtar,\:A. \textit{Submitted for review.}}
+\end{center}
+
+I generated Figure 1A and Figure S1C-E using data processed by Fidel Ramírez (\textit{D.~melanogaster}) and myself (\textit{D.~virilis, M.~musculus}) and contributed to the revision of the manuscript.
+
+\textbf{Abstract:}
+
+Proper gene expression requires the coordinated interplay between transcriptional co-activators, transcription factors and the general transcription machinery. We find that MSL1, a component of the \textit{Drosophila} dosage compensation complex, functions as a transcriptional co-activator with CDK7, a subunit of the Cdk-activating kinase (CAK) complex, which phosphorylates Ser5 of the carboxy-terminal domain of RNA polymerase II. The MSL1/CDK7 regulatory feedback loop is evolutionarily conserved and regulates both autosomal and X-linked target gene expression. MSL1 promotes the efficient recruitment and catalytic activity of CAK at core promoters. CDK7-
+mediated phosphorylation of MSL1 is essential for its proper targeting to specific autosomal sites and for X chromosome-enrichment of the entire MSL complex in male flies. In addition, MSL1 is required for proper mRNA 5’ capping, bridging transcription with posttranscriptional regulatory events. Thus, the MSL1/CDK7 feedback loop promotes robust target gene expression genome-wide and is distinctly important for dosage compensation in \textit{Drosophila}.

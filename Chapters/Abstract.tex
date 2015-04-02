@@ -1,0 +1,39 @@
+% Chapter Template
+
+\chapter{Summary} % Main chapter title
+
+\label{Abstract} % for referencing this chapter elsewhere, use \ref{ChapterX}
+
+%\lhead{Summary} % this is for the header on each page - perhaps a shortened title
+\fancyhead[RO,LE]{Summary}
+\fancyfoot[C]{\thepage}
+
+\section{Zusammenfassung}
+
+%Differenzielle Genexprimierung bildet die Grundlage für die Möglichkeit zur Ausbildung verschiedener Zellidentitäten und Verhaltensmuster. Chromatin spielt hierbei eine wichtig Rolle, da es vielfach modifiziert werden kann und direkten Einfluss auf die Genaktivität hat.
+Die Histon-Acetyltransferase MOF (males absent on the first) ist das wichtigste Enzym für die Acetylierung von Lysin 16 des Histons H4, wobei die katalytische Spezifität und Effektivität stark von ihren Interaktionspartnern, den MSL (male-specific lethal) und NSL (non-specific lethal) Komplexen, bestimmt wird. Der MSL Komplex ist von herausragender Bedeutung in der Taufliege (\textit{D.~melanogaster}), wo er für die transkriptionelle Kompensation der reduzierten Gendosis in X-chromosomal hemizygoten \textit{Drosophila}-Männchen verantwortlich ist. Welche Funktionen der MSL Komplex in Säugetieren erfüllen könnte, war zu Beginn meiner Arbeit kaum bekannt, ebensowenig wie die Rolle des NSL Komplexes, welcher weder in der Fliege noch in Säugetieren umfänglich erforscht war. Das Ziel meines Projekts war es, unser Wissen über beide MOF-Komplexe deutlich zu erweitern.
+
+Die Grundlage meiner Arbeit bildeten Chromatin-Im\-mun\-prä\-zi\-pi\-ta\-tions\-ex\-pe\-ri\-men\-te ge\-folgt von Hoch\-durch\-satz-DNA-Se\-quen\-zierung (ChIP-seq) für deren bio\-in\-for\-ma\-tische Analyse zu\-nächst standardisierte Protokolle sowie individuelle Auswertungen etabliert werden mussten. Das daraus resultierende Software-Paket deepTools kann nun für Qualitätskontrollen, Normalisierungen und Datenprozessierung ebenso verwendet werden wie für die bildliche Darstellung der Hoch\-durch\-satz-DNA-Se\-quen\-zierungs\-daten.
+
+Wir untersuchten die genomweiten Bindestellen des NSL Komplexes in \textit{Drosophila}- (NSL1, NSL3, MCRS2, MBD-R2) und Mauszellen (NSL3, MCRS1) und konnten mittels umfangreicher Charakterisierung der Zielgene und RNAi-basierten Experimenten zeigen, dass
+der NSL Komplex für die Ex\-pri\-mierung konstitutiv aktiver Gene vonnöten ist, um u.a. eine ausreichende Rekrutierung der RNA Polymerase II innerhalb des Prä\-ini\-tia\-tions\-kom\-plexes zu garantieren.
+
+Zusätzlich zum NSL Komplex untersuchten wir auch MOF und den MSL Komplex (MSL1, MSL2) in Mauszellen. In der überwiegenden Mehrzahl der Promoterbindestellen fanden wir MOF gemeinsam mit dem NSL Komplex vor, in einigen Fällen lag zusätzlich ein Signale des MSL Komplexes vor. Obwohl der MSL Komplex -- anders als in der Taufliege -- in Mauszellen keine starke Präferenz für das X Chromosom zeigt, stellten sich MSL1 und MSL2 als essentiell für den Erhalt der X-chromosomalen Genexprimierung in embryonalen Stammzellen heraus, da in ihrer Abwesenheit die Transkription von \textit{Tsix} und die damit verbundene Produktionshemmung der X-inaktivierenden \textit{Xist}-RNA stark beeinträchtigt ist. Der NSL Komplex trägt indirekt zur Inhibierung der X-Inaktivierung bei, indem er für die Exprimierung von Pluripotenzfaktoren wie Nanog, Oct4 und Esrrb in embryonalen Stammzellen erfoderlich ist. Darüber hinaus verglichen wir die genomweiten Signale von MSL1 in evolutionär weit voneinander entfernten Spezies (\textit{D.~melanogaster, D.~virilis} und \textit{M.~musculus}), aus welchen wir schlussfolgerten, dass MSL1 geschlechtsunabhängig an Genpromotoren bindet -- anders als bislang angenommen, auch in \textit{D.~melanogaster}.
+
+Zusammenfassend konnten wir zeigen, dass die mit MOF interagierenden Proteinkomplexe zum Teil deutlich voneinander abgrenzbare Funktionen ausführen: während der NSL Komplex in großem Ausmaß die grundlegende Exprimierung von basalen Haushaltsgenen reguliert, ist der MSL Komplex an hoch spezialisierten, aber ebenfalls lebenswichtigen Prozessen beteiligt.
+
+
+\section{Abstract}
+
+%Chromatin-related processes are important for differential gene regulation which is the basis for cell fate and behavior.
+The histone acetyl transferase males absent on the first (MOF) is responsible for the majority of histone H4 lysine 16 acetylation in \textit{Drosophila} and mammals. Its catalytic specificity and efficiency depend on the interaction with two protein complexes, the male-specific lethal (MSL) complex and the non-specific lethal (NSL) complex. The \textit{Drosophila} MSL complex has been thoroughly examined as it is essential for the transcriptional upregulation of the single male \textit{Drosophila} X chromosome to meet autosomal gene expression levels. Its function in mammals, however, was not clear. Likewise, the role of the NSL complex was poorly understood in both \textit{Drosophila} and mammalian cells. The aim of my project was to further our insights into these two distinct MOF-associated complexes.
+
+All studies presented here were centered around chromatin immunoprecipitation experiments followed by high-throughput DNA sequencing (ChIP-seq). The analyses required the set-up of a universal bioinformatic pipeline and customized workflows for downstream analyses and visualizations. These efforts became part of the deepTools software package that allows efficient and reproducible generation of normalized coverage files, offers quality controls and highly customizable visualization of high-throughput sequencing data.
+
+By investigating the genome-wide binding of NSL complex members in \textit{Drosophila} (NSL1, NSL3, MCRS2, MBD-R2) and mouse cells (NSL3, MCRS1) and subsequent extensive characterization of target genes coupled with perturbation experiments, we revealed that the NSL complex is an evolutionarily conserved regulator of housekeeping gene expression that is required for optimal recruitment of the pre-initiation complex. 
+
+In mammals, we complemented our study of the NSL complex with genome-wide profiles of MOF, MSL1 and MSL2 in murine embryonic stem cells (ESC) and neuronal progenitor cells (NPC). We determined constant and dynamic binding during differentiation and established the patterns of exclusive and concomitant targeting of both MOF-associated complexes. We found that the NSL complex is the predominant interaction partner of MOF in ESCs and NPCs. While the MSL complex is not specifically enriched on the mouse X chromosome, we could show that MSL1 and MSL2 are important for the maintenance of active X expression in ESCs by maintaining transcription of \textit{Tsix} whose expression inhibits the production of the X-inactivating transcript, \textit{Xist}. The NSL complex indirectly contributes to the repression of X inactivation through expression regulation of key pluripotency factors such as Nanog, Oct4 and Esrrb. Furthermore, the role of MSL1 was elucidated in more detail as the genome-wide profiles from distant species (\textit{D.~melanogaster, D.~virilis} and \textit{M.~musculus}) revealed evolutionarily conserved binding to gene promoters in a sex-independent manner. 
+
+In summary, we could show that MOF-associated complexes fulfill distinct vital roles in \textit{Drosophila} and mammals: while the NSL complex is an abundant regulator of basic cellular gene expression, the MSL complex was found to contribute to highly specialized functions.
+
+

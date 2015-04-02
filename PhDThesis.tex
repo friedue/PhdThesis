@@ -1,0 +1,299 @@
+% Masters/Doctoral Thesis 
+% LaTeX Template
+% Version 1.41 (9/9/13)
+%
+% This template has been downloaded from:
+% http://www.latextemplates.com
+%
+% Original authors:
+% Steven Gunn 
+% http://users.ecs.soton.ac.uk/srg/softwaretools/document/templates/
+% and
+% Sunil Patel
+% http://www.sunilpatel.co.uk/thesis-template/
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Note:
+% Make sure to edit document variables in the Thesis.cls file
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+\documentclass[11pt, a4paper, twoside]{Thesis} % Paper size, default font size and one-sided paper	
+\graphicspath{{Pictures/}} % Specifies the directory where pictures are stored
+\usepackage[utf8]{inputenc} % Umlaute
+\usepackage[ngerman, english]{babel} % Umlaute --> ngerman; english--> Table of content instead of Inhaltsverzeichnis etc.
+\usepackage{fixltx2e} % so that \textsubscript can be used
+\usepackage{lscape}
+\usepackage{rotating} % for landscape option
+\usepackage{booktabs, multirow, array} % everything that I need for tables
+\usepackage{enumitem}
+\usepackage[compact]{titlesec} % for changing space after section titles
+\titlespacing{\section}{0pt}{0pt}{0pt}
+\titlespacing{\subsection}{0pt}{0pt}{0pt}
+\titlespacing{\subsubsection}{0pt}{0pt}{0pt}
+\usepackage{pdfpages} % to be able to include pdf files as appendices (\includepdf[pages={-}]{myfile.pdf})
+\usepackage[super, numbers, comma, sort&compress]{natbib} % Use the natbib reference package - read up on this to edit the reference style; if you want text (e.g. Smith et al., 2012) for the in-text references (instead of numbers), remove 'numbers' 
+%\renewcommand{\bibname}{REFERENCES} % specify name of your heading for the bibliography
+%\AtBeginDocument{\renewcommand{\bibname}{References}}
+\hypersetup{urlcolor=black, colorlinks=false} % Colors hyperlinks in blue - change to black if annoying
+% my own (FD) modification: removing "Chapter" from Chapter header
+\makeatletter
+\def\@makechapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedright \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+      \if@mainmatter
+        %\huge\bfseries \@chapapp\space \thechapter
+        \Huge\bfseries \thechapter.\space%
+        %\par\nobreak
+        %\vskip 20\p@
+      \fi
+    \fi
+    \interlinepenalty\@M
+    \Huge \bfseries #1\par\nobreak
+    \vskip 40\p@
+  }}
+\makeatother
+\title{\ttitle} % Defines the thesis title - don't touch this
+
+\renewcommand\floatpagefraction{.9}
+%\renewcommand\dblfloatpagefraction{.9} % for two column documents
+\renewcommand\topfraction{.9}
+%\renewcommand\dbltopfraction{.9} % for two column documents
+\renewcommand\bottomfraction{.9}
+\renewcommand\textfraction{.1}   
+\setcounter{totalnumber}{50}
+\setcounter{topnumber}{50}
+\setcounter{bottomnumber}{50}
+
+\begin{document}
+
+\frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
+
+\setstretch{1.1} % Line spacing of 1.1
+
+% Define the page headers using the FancyHdr package and set up for one-sided printing
+\fancyhead{} % Clears all page headers and footers
+%\rhead{\thepage} % Sets the right side header to show the page number
+%\lhead{} % Clears the left side page header
+\fancyfoot[C]{\thepage}
+
+\pagestyle{fancy} % Finally, use the "fancy" page style to implement the FancyHdr headers
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % New command to make the lines in the title page
+\renewcommand{\thesubsubsection}{\hspace*{-1.0em}} % remove the numbering from subsubsections
+\renewcommand{\thefootnote}{\alph{footnote}}
+
+% PDF meta-data
+\hypersetup{pdftitle={\ttitle}}
+\hypersetup{pdfsubject=\subjectname}
+\hypersetup{pdfauthor=\authornames}
+
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\begin{titlepage}
+\begin{center}
+
+\large Max Planck Institut für Immunbiologie und Epigenetik\\Freiburg im Breisgau \\[1cm]
+
+\includegraphics[width=0.5\textwidth]{Figures/Siegel.png} 
+\\[1.3cm]
+
+%\textsc{\LARGE \univname}\\[1.5cm] % University name
+%\textsc{\Large Doctoral Thesis}\\[0.5cm] % Thesis type
+
+%\HRule \\[0.4cm] % Horizontal line
+{\huge \textbf{Bioinformatic analyses of\\MOF-containing complexes\\[9pt]in mammals and \textit{Drosophila}}}\\[1.5cm] % Thesis title
+%\HRule \\[1.5cm] % Horizontal line
+
+
+\textsc{\LARGE Inaugural-Dissertation}\\[1cm] % University name
+\large zur Erlangung der Doktorwürde\\der Fakultät für Biologie\\der Albert-Ludwigs-Universität Freiburg im Breisgau\\[1cm] % University requirement text
+ % Author name - remove the \href bracket to remove the link
+
+\large vorgelegt von\\Friederike Dündar \\[1.5cm]
+ 
+\large Freiburg im Breisgau \\ Oktober 2014 \\ % Date
+
+\vfill
+\end{center}
+
+\end{titlepage}
+
+%----------------------------------------------------------------------------------------
+%	DECLARATION PAGE
+%	Your institution may give you a different text to place here
+%----------------------------------------------------------------------------------------
+
+%\Declaration{
+
+%\addtocontents{toc}{\vspace{1em}} % Add a gap in the Contents, for aesthetics
+
+%I, \authornames, declare that this thesis titled, '\ttitle' and the work presented in it are my own. I confirm that:
+
+%\begin{itemize} 
+%\item[\tiny{$\blacksquare$}] This work was done wholly or mainly while in candidature for a research degree at this University.
+%\item[\tiny{$\blacksquare$}] Where any part of this thesis has previously been submitted for a degree or any other qualification at this University or any other institution, this has been clearly stated.
+%\item[\tiny{$\blacksquare$}] Where I have consulted the published work of others, this is always clearly attributed.
+%\item[\tiny{$\blacksquare$}] Where I have quoted from the work of others, the source is always given. With the exception of such quotations, this thesis is entirely my own work.
+%\item[\tiny{$\blacksquare$}] I have acknowledged all main sources of help.
+%\item[\tiny{$\blacksquare$}] Where the thesis is based on work done by myself jointly with others, I have made clear exactly what was done by others and what I have contributed myself.\\
+%\end{itemize}
+\thispagestyle{empty}
+\vspace*{\fill}
+Dekan der Fakultät für Biologie: Prof. Dr. Wolfgang Driever \\
+Promotionsvorsitzender: Prof. Dr. Stefan Rotter \\
+Betreuer der Arbeit: Dr. Asifa Akhtar \\
+Referent: Dr. Asifa Akhtar \\
+Koreferent: Prof. Dr. Wolfgang Hess \\
+Drittprüfer: Prof. Dr. Jörn Dengjel\\
+Datum der mündlichen Prüfung:
+\clearpage
+%Signed:\\
+%\rule[1em]{25em}{0.5pt} % This prints a line for the signature
+ 
+%Date:\\
+%\rule[1em]{25em}{0.5pt} % This prints a line to write the date
+%}
+
+%\clearpage % Start a new page
+%----------------------------------------------------------------------------------------
+%	ACKNOWLEDGEMENTS
+%----------------------------------------------------------------------------------------
+
+\setstretch{1.3} % Reset the line-spacing to 1.3 for body text (if it has changed)
+\acknowledgements{ % Add a gap in the Contents, for aesthetics \addtocontents{toc}{\vspace{1em}}
+%\pagenumbering{roman}
+\thispagestyle{empty}
+\input{Chapters/Acknowledgements}
+}
+%\clearpage % Start a new page
+
+
+
+%----------------------------------------------------------------------------------------
+%	LIST OF CONTENTS/FIGURES/TABLES PAGES
+%----------------------------------------------------------------------------------------
+
+\pagestyle{fancy} % The page style headers have been "empty" all this time, now use the "fancy" headers as defined before to bring them back
+\pagenumbering{roman}
+%\lhead{\emph{Contents}} % Set the left side page header to "Contents"
+\fancyhead[RO,LE]{\emph{Contents}}
+\fancyfoot{}
+
+\tableofcontents % Write out the Table of Contents
+
+%\lhead{\emph{List of Figures}} % Set the left side page header to "List of Figures"
+\fancyhead[RO,LE]{\emph{List of Figures}}
+\fancyfoot{}
+
+\listoffigures % Write out the List of Figures
+
+%\lhead{\emph{List of Tables}} % Set the left side page header to "List of Tables"
+\fancyhead[RO,LE]{\emph{List of Tables}}
+\fancyfoot{}
+\listoftables % Write out the List of Tables
+
+%%-----------------------------
+\setstretch{1.3}  % Set the line spacing to 1.5, this makes the following tables easier to read
+%\clearpage  % Start a new page
+%\lhead{\emph{Abbreviations}}  % Set the left side page header to "Abbreviations"
+\fancyhead[RO,LE]{\emph{Abbreviations}}
+\fancyfoot{}
+\listofsymbols{ll}  % Include a list of Abbreviations (a table of two columns)
+{
+\input{Tables/Table_Abbreviations}
+% \textbf{Acronym} & \textbf{W}hat (it) \textbf{S}tands \textbf{F}or \\
+%\textbf{LAH} & \textbf{L}ist \textbf{A}bbreviations \textbf{H}ere \\
+}
+%% ----------------------------------------------------------------
+% End of the pre-amble, contents and lists of things
+% Begin the Dedication page
+
+\setstretch{1.3}  % Return the line spacing back to 1.3
+
+%\pagestyle{empty}  % Page style needs to be empty for this page
+%\dedicatory{For/Dedicated to/To my\ldots}
+
+\addtocontents{toc}{\vspace{2em}}  % Add a gap in the Contents, for aesthetics
+
+%----------------------------------------------------------------------------------------
+%	THESIS CONTENT - CHAPTERS
+%----------------------------------------------------------------------------------------
+
+\mainmatter % Begin numeric (1,2,3...) page numbering
+
+\pagestyle{fancy} % Return the page headers back to the "fancy" style
+\setstretch{1.3}
+% Include the chapters of the thesis as separate files from the Chapters folder
+\input{Chapters/Abstract}
+\input{Chapters/Introduction}
+%\input{Chapters/Aims}
+\input{Chapters/ResultsDiscussion}
+
+%\input{Tables/TableTesting}
+
+%----------------------------------------------------------------------------------------
+%	THESIS CONTENT - APPENDICES
+%----------------------------------------------------------------------------------------
+
+\addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
+
+\appendix % Cue to tell LaTeX that the following 'chapters' are Appendices
+
+% Include the appendices of the thesis as separate files from the Appendices folder
+
+\input{Appendices/AppendixPublications}
+\input{Appendices/AppendixInfo}
+\chapter{Academic vita}
+\begin{singlespacing}
+\vspace*{-1cm}
+\textbf{\Large{Education}}
+\input{Tables/Table_CV}
+\vspace*{0.2cm}
+\textbf{\Large{Publications}}
+
+Chelmicki T and \textbf{D{\"u}ndar F}* et al. MOF complexes use short and long-range interactions to ensure stem cell identity and Xist repression. \textit{eLife} 2014 May 19;3:e02024.
+
+Ramirez F and \textbf{D{\"u}ndar F}* et al. deepTools: Analyzing and visualizing high-throughput sequencing data. \textit{Nucleic Acids Research} 2014 Jul;42(Web Server issue):W187-91.
+
+Lam KC, \textbf{M{\"u}hlpfordt F}* and Vaquerizas JM et al. The NSL complex regulates housekeeping genes in Drosophila. \textit{PLoS Genetics} 2012 May;8(6):e1002736. 
+
+Bobak N et al.** Volume regulation of murine T lymphocytes relies on voltage-dependent and two-pore domain potassium channels. \textit{Biochim Biophys Acta.} 2011 Aug;1808(8):2036-44.
+
+* shared first authorship, ** author on 5th position
+\end{singlespacing}
+
+\addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
+
+\backmatter
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\label{Bibliography}
+
+%\lhead{\emph{References}} % Change the page header to say "References"
+\fancyhead[RO,LE]{Bibliography}
+\fancyfoot[C]{\thepage}
+
+\begin{singlespacing}
+\begin{sffamily}
+\begin{footnotesize}
+\bibliographystyle{MYunsrtnat} % Use the "unsrtnat" BibTeX style for formatting the Bibliography
+\setlength{\bibsep}{2pt}
+\bibliography{BibliographyMod} % The references (bibliography) information are stored in the file named "Bibliography.bib"
+\end{footnotesize}
+\end{sffamily}
+\end{singlespacing}
+
+\end{document}  
+

@@ -1,0 +1,70 @@
+% TABLE: Public (non-in-house) data sets
+\begin{singlespacing}
+\begin{small}
+\begin{sffamily}
+\vspace*{-2em}
+\begin{longtable}[l]{p{2.5cm}p{3.2cm}p{3cm}}
+\caption[ChIP-chip modENCODE data sets from S2 cells.]{\textsf{ChIP-chip modENCODE data sets for which we downloaded the processed coverage files from GEO. All ChIP experiments were done in S2 cells.}} \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% table title
+\textbf{Sample} & \textbf{Downloaded data} & \textbf{Accession number} 
+\tabularnewline \toprule
+\endfirsthead % indicates that the lines above appear as head of the table on the first page
+%
+\multicolumn{3}{c}%
+{\tablename\ \thetable\ -- \textit{Continued from previous page}} \\
+\textbf{Sample} & \textbf{Downloaded data} & \textbf{Source} 
+\tabularnewline \toprule \tabularnewline [1ex]
+\endhead % Line(s) to appear at top of every page (except first)
+%
+\hline \multicolumn{3}{r}{\textit{Continued on next page}} \\
+\endfoot % Last line(s) to appear at the bottom of every page (except last)
+\endlastfoot
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\tabularnewline \toprule
+H3 & .bedgraph & GSM93208
+\tabularnewline \midrule
+%
+H3K4me3 & .bedgraph & GSE20787
+\tabularnewline \midrule
+H3K36me3 & .bedgraph & GSE20785
+\tabularnewline \midrule
+H3K4me2 & .bedgraph & GSE23470
+\tabularnewline \midrule
+H4K5ac & .bedgraph & GSE20800
+\tabularnewline \midrule
+H3K9ac & .bedgraph & GSE20790
+\tabularnewline \midrule
+H4K8ac & .bedgraph & GSE20801
+\tabularnewline \midrule
+H3K9me3 & .bedgraph & GSE20794
+\tabularnewline \midrule
+H3K9me3 & .bedgraph & GSE20794
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tabularnewline \bottomrule
+\label{tab:modENCODE}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{longtable}
+%
+\vspace{-2em}
+%
+\begin{minipage}{\textwidth}
+\begin{longtable}[l]{p{2.5cm}p{3.2cm}p{3cm}}
+\caption[\textsf{Publicly available ChIP-seq data of MSL complex members in \textit{Drosophila}.}]{\textsf{ChIP-seq data of MSL complex members, downloaded and processed by Fidel Ramírez and used for \fref{fig:profiles}.}} \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% table title
+\textbf{Sample} & \textbf{Accession number} 
+\tabularnewline \toprule
+MSL2 & GSE37864
+\tabularnewline \midrule
+MSL3 & GSE37864
+\tabularnewline \midrule
+MLE & SRX111555
+\tabularnewline \bottomrule
+\label{tab:Becker}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{longtable}
+\end{minipage}
+\end{sffamily}
+\end{small}
+\end{singlespacing}

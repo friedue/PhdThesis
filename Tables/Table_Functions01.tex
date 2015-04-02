@@ -1,0 +1,111 @@
+\vspace*{-2em}
+%\begin{landscape}
+\begin{minipage}{\textwidth}
+\begin{singlespacing}
+\begin{small}
+\begin{sffamily}
+\begin{longtable}[l]{>{\textsf\bgroup}p{3.8cm}<{\egroup} >{\raggedright\arraybackslash}p{2.7cm} >{\textsf\bgroup}p{7cm}<{\egroup}}
+\caption[MOF-associated proteins in transcription activation.]{\textsf{MOF-associated proteins in transcription activation. Related to \fref{fig:functions}.}} \\ % the \\ is important! see http://tex.stackexchange.com/questions/103698/extra-alignment-tab-with-longtable
+%%%%%%%%%%%%%%%
+% table title
+\textbf{Proteins} & \textbf{Function} & \textbf{Biological effect}
+\tabularnewline \toprule
+%\endfirsthead % indicates that the lines above appear as head of the table on the first page
+%\multicolumn{3}{c}%
+%{\tablename\ \thetable\ -- \textit{Continued from previous page}} \\ [2ex]
+%\textbf{Proteins} & \textbf{Function} & \textbf{Biological effect}
+%\tabularnewline \toprule \tabularnewline [1ex]
+%\endhead % Line(s) to appear at top of every page (except first)
+%\multicolumn{3}{r}{\textit{Continued on next page}} \\
+%\endfoot % Last line(s) to appear at the bottom of every page (except last)
+%\endlastfoot
+%%%%%%%%%%%%%%%%%%%
+%%% let's start the table content; each column (often) gets its own minipage which enables itemized lists etc.
+%%%%%%%%%%%%%%%%%%%
+%% first row
+%-----------------------
+%\\ \multicolumn{3}{c}{\textbf{\textsf{Gene expression}}}
+%\\ [2ex] \hline \\ [1ex]
+%------------------
+\begin{minipage}[c]{3.8cm}
+				\vskip 2pt
+					MOF within the\\MSL complex \\
+				(MSL1, MSL2,\\MSL3, MLE (roX))
+				\vskip 2pt
+			\end{minipage}
+			& \begin{minipage}[c]{2.7cm}
+					\raggedright acetylation of H4K16ac \citep{Akhtar2000,Taipale2005,Li2009} \\
+			\end{minipage}
+					& \begin{minipage}[c]{7cm}
+					\vskip 2pt
+									\begin{itemize}[noitemsep, leftmargin=*]
+										\item opening of chromatin (reviewed by \citet{Preez2013})
+										\item dosage compensation in male \textit{D.~melano\-gaster} that entails the upregulation of the entire X chromosome \citep{Conrad2011}
+									\end{itemize}				
+									\vskip 2pt
+							\end{minipage}
+%\\ [2ex] \hline \\ [1ex]
+\tabularnewline \midrule
+%-----------------------
+\begin{minipage}[c]{3.8cm}
+\vskip 2pt
+					MOF within the\\NSL complex \\
+				(NSL1, NSL2, NSL3,\\MCRS2, MBD-R2, WDS)
+				\vskip 4pt
+			\end{minipage}
+			& \begin{minipage}[c]{2.7cm}
+							\raggedright acetylation of H4K16 \citep{Li2009}, H4K5, H4K8 \citep{Cai2010}
+			\end{minipage}
+					& \begin{minipage}[c]{7cm} % 3rd column
+									\begin{itemize}[noitemsep, leftmargin=*]
+										\item opening of chromatin \citep{Preez2013}
+										\item housekeeping gene regulation \citep{Feller2012, Lam2012}
+									\end{itemize}				
+							\end{minipage}
+%\\ [2ex] \hline \\ [1ex]
+\tabularnewline \midrule
+%-----------------------
+\begin{minipage}[c]{3.8cm}
+					MSL2
+			\end{minipage}
+			& \begin{minipage}[c]{2.7cm}
+			\vskip 2pt
+					\raggedright ubiquitylation of H2BK34 \citep{Wu2011}
+					\vskip 4pt
+			\end{minipage}
+					& \begin{minipage}[c]{7cm} % 3rd column
+					\vskip 2pt
+							implicated to stimulate methylation of H3K4 \citep{Wu2011} and transcription elongation \citep{Wu2014}
+							\vskip 4pt
+							\end{minipage}
+\tabularnewline \midrule
+%\\ [2ex] \hline \\ [1ex]
+%-----------------------
+\begin{minipage}[c]{3.8cm}
+\vskip 2pt
+					MCRS2
+					\vskip 4pt
+\end{minipage}
+			& \begin{minipage}[c]{2.7cm}
+			\vskip 2pt
+					interaction partner
+					\vskip 4pt
+			\end{minipage}
+					& \begin{minipage}[c]{7cm} % 3rd column
+					\vskip 2pt
+							facilitates Pol~II recruitment to target genes \citep{Andersen2010}
+							\vskip 4pt
+						\end{minipage}
+%\\ [2ex] \hline\pagebreak
+%-----------------------
+%\multicolumn{3}{c}{\textbf{\textsf{Cell-cycle-associated processes}}}
+%\\ [2ex] \hline \\ [1ex]
+%-----------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tabularnewline \bottomrule
+\label{tab:functions1}
+\end{longtable}
+\end{sffamily}
+\end{small}
+\end{singlespacing}
+\end{minipage}

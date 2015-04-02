@@ -1,0 +1,37 @@
+\begin{minipage}{\textwidth} % to avoid pagebreaks despite longtable environment
+\begin{singlespacing}
+\begin{small}
+\setlength{\extrarowheight}{2pt}
+%\vspace*{-2em}
+\begin{longtable}[l]{>{\textsf\bgroup}p{2cm}<{\egroup} >{\textsf\bgroup}p{6cm}<{\egroup} >{\textsf\bgroup}p{6cm}<{\egroup}} % defining the columns - these must match the widths defined for the mini pages down below!
+\caption[Publicly available data bases that were used.]{\textsf{Publicly available data bases that were used.}} \\ % the \\ is important!
+%%%%%%%%%%%%%%%
+% table title
+\textbf{Name} & \textbf{Application} & \textbf{Website}
+\tabularnewline
+%-----------------------
+\toprule
+ ArrayExpress & up- and download of high-throughput sequencing data (only raw read files) & \url{http://www.ebi.ac.uk/arrayexpress/} 
+\tabularnewline \midrule
+%--------------------------
+ BioMart & mapping of gene and transcripts between different annotations for genome version mm9, e.g. Ensembl and RefSeq; download of non-protein-coding transcripts & \url{http://may2012.archive.ensembl.org/biomart/martview/} 
+\tabularnewline \midrule
+%--------------------------
+ FlyBase & download of gene lists and genome sequence & \url{http://flybase.org/} 
+\tabularnewline \midrule
+%--------------------------
+GEO & up- and download of high-throughput sequencing data (raw and processed data) & \url{http://www.ncbi.nlm.nih.gov/geo/} 
+\tabularnewline \midrule
+%--------------------------
+HomoloGene & list of orthologous genes in \textit{Drosophila}, mice and humans & \url{http://www.ncbi.nlm.nih.gov/homologene} 
+\tabularnewline \midrule
+%--------------------------
+\raggedright UCSC Table Browser & RefSeq gene lists, mappability tracks, GC content tracks, mouse DNase hypersensitivity tracks & \url{https://genome.ucsc.edu/}
+%--------------------------
+\tabularnewline \bottomrule
+%-----------------------------
+\label{tab:DB}
+\end{longtable}
+\end{small}
+\end{singlespacing}
+\end{minipage}
